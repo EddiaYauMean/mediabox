@@ -5,7 +5,7 @@ Mediabox is an all Docker Container based media aggregator stack.
 Components include:
 
 *   [Couchpotato movie library manager](https://couchpota.to/)
-*   [Deluge torrent client (using VPN)](http://deluge-torrent.org/)
+*   [Transmission torrent client (using VPN)](https://haugene.github.io/docker-transmission-openvpn)
 *   [Duplicati Backup Software](https://www.duplicati.com/)
 *   [Headphones](https://github.com/linuxserver/docker-headphones)
 *   [Jackett Tracker API and Proxy](https://github.com/Jackett/Jackett)
@@ -73,7 +73,7 @@ Add the current user to the docker group:
 
 `$ sudo usermod -aG docker $USER`
 
-Adjustments for the the DelugeVPN container
+Adjustments for the the TransmissionVPN container
 
 `$ sudo /sbin/modprobe iptable_mangle`
 
@@ -100,8 +100,17 @@ Once the prerequisites are all taken care of you can move forward with using med
 As the script runs you will be prompted for:
 
 1.  Your Private Internet Access credentials
+
     *   **username**
     *   **password**
+	*   **server**
+
+	Note: You may choose from the following servers which support port forwarding:
+	
+	CA Monrtreal | CA Toronto | CA Vancouver | Czech Republic | DE Berlin 
+	DE Frankfurt | France | Israel | Romania | Spain | Sweden | Swtizerland
+	
+	Enter as plain text, for example: Sweden
 
 2.  The version of Plex you want to run
     *   **latest**
@@ -114,9 +123,32 @@ As the script runs you will be prompted for:
     *   **auth** (will require a password, require a persistent volume map, and will need you to select the endpoint to manage)
     *   **noauth** (will not require a password for access and will automatically connect to the local Docker sock endpoint)
 
-4.  Credentials for the NBZGet interface and the Deluge daemon which needed for the CouchPotato container.
+4.  Credentials for the NBZGet, Transmission and Minio.
     *   **username**
     *   **password**
+
+5.  Transmission torrent client settings.
+
+	Note: Transmission settings can only be configured within the script due to the nature of the container. All settings can de set to default by pressing enter in the setup. 
+
+    *   **Authentication** - Enable or disable authenticaion for Transmission
+    *   **Web-UI** - Choose the Webui for Transmission (combustion, kettu, transmission-wen-control)
+    *   **UTP** - Enable or disable UTP network control
+    *   **PEX** - Enable or disable PEX (Peer Exchange)
+    *   **DHT** - Enable or disable DHT 
+    *   **Seed Ratio Limit** - Enable or disable a seed ratio
+    *   **Seed Ratio** - Set the seed ratio
+    *   **Seed Time Limit** - Enable or disable a seed time limit
+    *   **Seed Time** - Set the seed time
+    *   **Upload Speed Limit** - Enable or disable a upload speed limit
+    *   **Upload Speed** - Set the upload speed
+    *   **Download Speed Limit** - Enable or disable a download speed limit
+    *   **Download Speed** - Set the download speed
+    *   **Seed Queue** - Set the seed queue size
+    *   **Download Queue** - Set the download queue size
+    *   **Global Peer Limit** - Set the global number of peers
+    *   **Torrent Peer Limit** - Set the max number of peers per torrent
+    *   **Blocklist** - Enable or disable a blocklist
 
 Upon completion, the script will launch your mediabox containers.
 

@@ -43,14 +43,6 @@ icon = "muximux-couchpotato"
 color = "#f85c22"
 enabled = "true"
 
-[Deluge]
-name = "Deluge"
-url = "http://locip:8112"
-scale = 1
-icon = "muximux-deluge"
-color = "#385171"
-enabled = "true"
-
 [Duplicati]
 name = "Duplicati"
 url = "http://locip:8200"
@@ -168,4 +160,12 @@ url = "http://locip:8181"
 scale = 1
 icon = "muximux-plexivity"
 color = "#cc7b19"
+enabled = "true"
+
+[Transmission]
+name = "Transmission"
+url = "http://locip:9091"
+scale = 1
+icon = "muximux-transmission"
+color = "#385171"
 enabled = "true"

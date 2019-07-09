@@ -29,8 +29,8 @@ body {
 <b><u>Couchpotato:</u></b><br />
 As you go through the Couchpotato Setup Wizard use these settings:<br />
 <ul>
-<li> Turn on Deluge -- Click the "slider" to the right of the Deluge option<br />
-<li> Host: locip:58846<br />
+<li> Turn on Transmission -- Click the "slider" to the right of the Transmission option<br />
+<li> Host: locip:9091<br />
 <li> Username: daemonun<br />
 <li> Password: daemonpass<br />
 <li> Directory: [Leave Blank]<br />
@@ -39,7 +39,7 @@ As you go through the Couchpotato Setup Wizard use these settings:<br />
 After the Wizard is complete:<br />
 <ul>
 <li> Click on the "gear" icon and select "Settings"<br />
-<li> Go to > Downloaders > Deluge > & click the "Test Deluge" button to verify the connection.<br />
+<li> Go to > Downloaders > Transmission> & click the "Test Transmission" button to verify the connection.<br />
 <li> Go to > Renamer - and turn it on > click the "slider" to the right<br />
 <li>In the From field: /downloads<br />
 <li>In the To field: /movies<br />
@@ -50,13 +50,14 @@ After the Wizard is complete:<br />
 <li>Click on the Settings icon<br />
 <li>Click on the Download Client Tab<br />
 <li>Click on the + sign to add a download client<br />
-<li>Under the "Torrent" section Select Deluge<br />
+<li>Under the "Torrent" section Select Transmission<br />
 <li>Enter these settings:<br />
-    * Name: Deluge<br />
+    * Name: Transmission<br />
     * Enable: Yes<br />
     * Host: locip<br />
-    * Port: 8112<br />
-    * Password: deluge (unless you have changed it)<br />
+    * Port: 9091<br />
+    * Usernam: daemonun<br />
+    * Password: daemonpass<br />
     * Category: blank<br />
     * Use SSL: No<br />
 <li>Optional: Click on the media management tab and configure the renamer<br />
@@ -78,9 +79,9 @@ After the Wizard is complete:<br />
 <li>Click on the settings "gear" icon<br />
 <li>Go to > Search Settings > Torrent Search (Tab)<br />
 <li>Check the box for Enable Torrent Search Providers<br />
-<li>For the "Send .torrent files to" dropdown select: Deluge (via WebUI)<br />
-<li>For "Torrent host:port" use: http://locip:8112<br />
-<li>For client password use: deluge (unless you have changed it)<br />
+<li>For the "Send .torrent files to" dropdown select: Transmission<br />
+<li>For "Torrent host:port" use: http://locip:9091<br />
+<li>For client username/password use: daemonun/daemonpass<br />
 <li>After the settings are in Click the "Test Connection" button to see if it works -- Click "Save Changes"<br />  
 </ul>
 <br />
@@ -97,8 +98,8 @@ Go to the Download Settings Tab<br />
 </ul>
 <u>For Torrents</u>:<br />
 <ul>
-<li>Select Deluge<br />
-<li>Deluge WebUI Host and Port: http://locip:8112<br />
+<li>Select Transmission<br />
+<li>Transmission Host and Port: http://locip:9091<br />
 <li>Deluge Password: deluge (unless you have changed it)<br />
 <li>Music Download Directory: /downloads<br />
 </ul>
