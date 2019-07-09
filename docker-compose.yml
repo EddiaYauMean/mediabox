@@ -140,6 +140,7 @@ services:
             - './jellyfin:/config'
             - '${TVDIR}:/media/tv'
             - '${MOVIEDIR}:/media/movies'
+            - '${MUSICDIR}:/media/music'
             - '/etc/localtime:/etc/localtime:ro'
 
     # ----------------------------------------
