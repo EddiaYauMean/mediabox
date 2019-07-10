@@ -67,8 +67,9 @@ services:
             - PUID=${PUID}
             - PGID=${PGID}
             - LOCAL_NETWORK=${CIDR_ADDRESS}
-            - TRANSMISSION_DOWNLOAD_DIR=${DLDIR}/completed
-            - TRANSMISSION_INCOMPLETE_DIR=${DLDIR}/incomplete
+            - TRANSMISSION_DOWNLOAD_DIR=/downloads/completed
+            - TRANSMISSION_INCOMPLETE_DIR_ENABLED=true
+            - TRANSMISSION_INCOMPLETE_DIR=/downloads/incomplete
             - TRANSMISSION_SPEED_LIMIT_DOWN=${TDNSPEED}
             - TRANSMISSION_SPEED_LIMIT_DOWN_ENABLED=${TDLIMIT}
             - TRANSMISSION_SPEED_LIMIT_UP=${TUPSPEED}
